@@ -1,0 +1,1 @@
+fruist = ["Apple","Banana","Cherry"]
