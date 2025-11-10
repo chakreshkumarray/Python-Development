@@ -4,8 +4,8 @@ import shutil
 
 # ----- Define source and destination -----
 
-source_folder = r"E:\Python-Development\2. Project\1. Move File Between Folder\1. Source File"
-destination_folder = r"E:\Python-Development\2. Project\1. Move File Between Folder\2. Destination File"
+source_folder = r"E:\Python-Development\1. Python\2. Project\1. Move Read Write Update File Between Folder\1. Source File"
+destination_folder = r"E:\Python-Development\1. Python\2. Project\1. Move Read Write Update File Between Folder\2. Destination File"
 file_name = "students_data.csv"   # CSV file to move
 
 
