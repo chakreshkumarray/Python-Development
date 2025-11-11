@@ -5,7 +5,7 @@ def sumofthree(a, b, c):
 
 print(sumofthree(2,3,5))
 
-# * Args
+# * Args Positional arguments
 def sum_of_nums(*nums):
   total = 0
   for i in nums:
@@ -14,7 +14,7 @@ def sum_of_nums(*nums):
 
 print(sum_of_nums(4,4,5,3,6,2,1))
 
-# * Args multiple type args
+# * Args multiple type args positional args
 def sum_of_nums(*nums, msg):
   print(msg)
   total = 0
