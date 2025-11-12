@@ -3,29 +3,25 @@ import os
 
 file_name = "notes.txt"
 
-# ✅ Check if file exists
+# Create file if it doesn't exist
 if not os.path.exists(file_name):
-    # Create file and write initial content
-    with open(file_name, "w") as file:
-      file.write("This is a new file.\n")
-      file.write("File created successfully.\n")
+  with open(file_name, "w") as f:
+    f.write("I am Ck.\n Belong to UP Sultanpur.\n")
     print("🆕 File created and data written.")
 else:
-    print("📄 File already exists.")
+  print("📄 File already exists.")
 
-# Read the file
-with open(file_name, "r") as file:
-  print("\n--- Current File Content ---")
-  print(file.read())
+# Read and display current content
+print("\n--- Current File Content ---")
+with open(file_name, "r") as f:
+  print(f.read())
 
-# Update (append) new data
-with open(file_name, "a") as file:
-  file.write("\nAdding some new content...\n")
-  file.write("File updated successfully!\n")
+# Append new content
+with open(file_name, "a") as f:
+  f.write("\n I am interested in software developmwent...\n Also like java and Python development!\n")
 
-print("\n✅ File updated successfully!")
-
-# Read again to confirm update
-with open(file_name, "r") as file:
-  print("\n--- Updated File Content ---")
-  print(file.read())
+# Read and display updated content
+print("\n✅ File updated successfully!\n")
+print("--- Updated File Content ---")
+with open(file_name, "r") as f:
+  print(f.read())
