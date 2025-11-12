@@ -2,7 +2,7 @@
 import os
 import shutil
 
-# --- Define paths ---
+# Define paths
 source_folder = r"E:\Python-Development\1. Python\2. Project\1. Move Read Write Update File Between Folder\1. Source File"
 destination_folder = r"E:\Python-Development\1. Python\2. Project\1. Move Read Write Update File Between Folder\2. Destination File"
 file_name = "move_copy_of_file.csv"
