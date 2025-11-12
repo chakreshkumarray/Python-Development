@@ -21,4 +21,4 @@ def read_file():
 
 
 if __name__ == "__main__":
-    read_file()
+  read_file()
