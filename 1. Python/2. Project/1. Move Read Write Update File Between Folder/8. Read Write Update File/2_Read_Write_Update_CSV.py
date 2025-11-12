@@ -1,42 +1,37 @@
 
-import csv
-import os
+import csv, os
 
-file_name = "data.csv"
+file = "data.csv"
 
-# Check if file exists
-if not os.path.exists(file_name):
-    # Create file and write initial 5x5 data
-    with open(file_name, "w", newline="") as file:
-      writer = csv.writer(file)
-      writer.writerow(["ID", "Name", "Age", "City", "Score"])
-      writer.writerow([1, "Alice", 23, "Delhi", 85])
-      writer.writerow([2, "Bob", 27, "Mumbai", 90])
-      writer.writerow([3, "Charlie", 22, "Bangalore", 75])
-      writer.writerow([4, "Diana", 25, "Pune", 88])
-      writer.writerow([5, "Ethan", 29, "Chennai", 92])
+# Create file if not exists
+if not os.path.exists(file):
+  with open(file, "w", newline="") as f:
+    w = csv.writer(f)
+    w.writerow(["ID", "Name", "Age", "City", "Score"])
+    w.writerows([
+       [1, "Alice", 23, "Delhi", 85],
+       [2, "Bob", 27, "Mumbai", 90],
+       [3, "Charlie", 22, "Bangalore", 75],
+       [4, "Diana", 25, "Pune", 88],
+       [5, "Ethan", 29, "Chennai", 92]
+       ])
     print("🆕 File created and data written.")
 else:
   print("📄 File already exists.")
 
-# Read the file
+# Read file
 print("\n--- Current CSV Content ---")
-with open(file_name, "r") as file:
-  reader = csv.reader(file)
-  for row in reader:
-    print(row)
+for row in csv.reader(open(file)):
+  print(row)
 
-# Update (append) new data
-with open(file_name, "a", newline="") as file:
-  writer = csv.writer(file)
-  writer.writerow([6, "Farhan", 24, "Kolkata", 81])
-  writer.writerow([7, "Grace", 26, "Hyderabad", 89])
+# Append new data
+with open(file, "a", newline="") as f:
+  csv.writer(f).writerows([
+    [6, "Farhan", 24, "Kolkata", 81],
+    [7, "Grace", 26, "Hyderabad", 89]
+    ])
 
-print("\n✅ File updated successfully!")
-
-# ✅ Read again to confirm update
+# Read updated file
 print("\n--- Updated CSV Content ---")
-with open(file_name, "r") as file:
-  reader = csv.reader(file)
-  for row in reader:
-    print(row)
+for row in csv.reader(open(file)):
+  print(row)
