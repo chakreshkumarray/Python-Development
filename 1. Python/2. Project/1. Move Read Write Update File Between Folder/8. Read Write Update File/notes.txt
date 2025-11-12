@@ -1,8 +1,5 @@
-This is a new file.
-File created successfully.
+I am Ck.
+ Belong to UP Sultanpur.
 
-Adding some new content...
-File updated successfully!
-
-Adding some new content...
-File updated successfully!
+ I am interested in software developmwent...
+ Also like java and Python development!
